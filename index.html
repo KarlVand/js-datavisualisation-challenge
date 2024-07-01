@@ -27,6 +27,7 @@
   <link rel="stylesheet" href="./assets/font-awesome.min.css">
   <link rel="stylesheet" href="./assets/statexpflat.css">
   <link rel="stylesheet" href="./assets/statexpflat-grid.css">
+  
 
   <style>
     a:lang(ar),
@@ -108,7 +109,7 @@
       </ul>
 
       <div class="heading">
-        <!--<div class="statexp-small hidden-lg hidden-md">Statistics Explained</div>-->
+        
         <div class="lighthouse articles visible-lg-block"></div>
 
         <div class="links hidden-xs hidden-sm">
@@ -195,10 +196,9 @@
           </ul>
 
         </div>
-        <!----
-		<div class="eurostat">eurostat</div>
-		<div class="statexp">Statistics Explained</div>
-		  -->
+      
+	
+		
         <a href="http://ec.europa.eu/eurostat/statistics-explained/index.php/Main_Page/fr">
           <div class="statexptitle"></div>
         </a>
@@ -212,7 +212,7 @@
             <span class="glyphicon glyphicon-remove icon-hide"></span>
           </button>
         </div>
-        <!---->
+        
         <div class="search-box hidden-xs hidden-sm">
           <form class="form-inline" action="http://ec.europa.eu/eurostat/statistics-explained/index.php" id="searchform">
             <input type="hidden" name="title" value="Special:Search">
@@ -460,16 +460,14 @@
     </div>
 
     <!--END HEADER BEGIN PAGE-->
-    <!----
-<div class="onerow">
--->
+    
+
+
     <div class="row content-row">
       <!-- BEGIN LSF -->
-      <!---->
+   
       <div class="hidden-md hidden-lg hidden-xs hidden-sm sidebar content-col">
-        <!----
-		<div class="col2 sidebar">
-		-->
+ 
         <div class="col-lg-4 col-md-4 head-menu-bar">
           <div class="dropdown">
             <button class="btn btn-default dropdown-toggle" type="button" id="p-navigation" data-toggle="dropdown" aria-haspopup="true"
@@ -799,9 +797,11 @@
                 <span class="mw-headline" id="Crimes_et_d.C3.A9lits_enregistr.C3.A9s_par_les_services_de_police">Crimes recorded by the police</span>
               </h3>
 
+             <canvas id="myChart" width="800" height="600"></canvas>
 
-              <table cellspacing="0" cellpadding="0" id="table1">
+              <table id="table1">
                 <caption> Table 1: Offences recorded by the police, 2002-12</caption>
+            
                 <thead>
                   <tr>
                     <th>N°</th>
@@ -1426,6 +1426,8 @@
                   </tr>
                 </tbody>
               </table>
+
+              <button id="dl-json">download Json</button>
 
               <p>
                 The crime statistics presented in this article cover offences recorded by police in EU Member States and some other European countries. These data do not purport to describe all crime in Europe: some crime goes unreported and changes in rates of particular offences may be affected by new policing strategies or methodological changes.
@@ -2062,6 +2064,7 @@
 
     <!--END PAGE-->
   </div>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
   <script src="graphics.js"></script>
 </body>
 
