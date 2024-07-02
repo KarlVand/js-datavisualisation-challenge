@@ -1,9 +1,17 @@
-// Extract the data from the first column into a separate array
 const dataTableOne = document.querySelector("#table1");
+const firstTableData = dataTableOne.getElementsByTagName("td");
 const rows = dataTableOne.querySelectorAll("tbody tr");
 const countries = [];
+const yearRow = dataTableOne.querySelector("tbody tr");
+const yearCells = yearRow.querySelectorAll("th");
+const years = [];
 
-// Iterate over each row to get the country names
+// get all data
+for (let i = 0; i < firstTableData.length; i++) {
+  console.log(firstTableData[i].textContent);
+}
+
+// countries
 rows.forEach(row => {
   const countryCell = row.querySelector("td");
   if (countryCell) {
@@ -11,15 +19,13 @@ rows.forEach(row => {
   }
 });
 
-// Extract the years from the year row
-const yearRow = dataTableOne.querySelector("thead tr");
-const yearCells = yearRow.querySelectorAll("th");
-const years = [];
+// years
 
-// Skip the first two headers ("N°" and "Country") and collect the years
-for (let i = 6; i < yearCells.length; i++) {
+for (let i = 2; i < yearCells.length; i++) {
   years.push(yearCells[i].textContent);
 }
 
 console.log("Countries:", countries);
 console.log("Years:", years);
+
+//
