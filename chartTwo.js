@@ -1,25 +1,3 @@
-/* function retrieveData() {
-  const table = document.getElementById("table2");
-  const rows = table.getElementsByTagName("tr");
-  const data = [];
-
-  for (let i = 1; i < rows.length; i++) {
-    const countryData = rows[i].querySelectorAll("td");
-    const countries = {
-      country: countryData[0].innerText,
-      data: {
-        "2007-09": parseInt(countryData[1].innerText),
-        "2010-12": parseInt(countryData[2].innerText),
-      },
-    };
-    data.push(countries);
-
-    console.log("tab2 country", countries);
-  }
-}
-
-*/
-
 function tableToObject() {
   const table = document.getElementById("table2");
   const rows = table.getElementsByTagName("tr");
