@@ -335,6 +335,10 @@
         </div>
       </div>
     </div>
+
+    <canvas id="chartLive" height="300"></canvas>
+
+
     <div class="row hidden-md hidden-lg">
       <div class="col-sm-12 col-xs-12 mobile-search">
         <div class="search-box search-box-mobile hidden-md hidden-lg">
@@ -1427,7 +1431,7 @@
                 </tbody>
               </table>
 
-              <button id="dl-json">download Json</button>
+          
 
               <p>
                 The crime statistics presented in this article cover offences recorded by police in EU Member States and some other European countries. These data do not purport to describe all crime in Europe: some crime goes unreported and changes in rates of particular offences may be affected by new policing strategies or methodological changes.
@@ -1470,7 +1474,7 @@
               <h4>
                 <span class="mw-headline" id="Homicides">Homicide</span>
               </h4>
-
+              <canvas id="chart2" height="300"></canvas>
               <table cellspacing="0" cellpadding="0" id="table2">
                 <caption>Prison population, average per year, 2007-09 and 2010-12
                   <br> (per 100,000 inhabitants)</caption>
@@ -2064,8 +2068,11 @@
 
     <!--END PAGE-->
   </div>
-  <script src="https://d3js.org/d3.v7.min.js"></script>
-  <script src="graphics.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="chartOne.js"></script>
+  <script src="chartTwo.js"></script>
+  <script src="liveChart.js"></script>
 </body>
+
 
 </html>
