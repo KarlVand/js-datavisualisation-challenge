@@ -57,3 +57,24 @@ function yearsOne() {
 
 getData();
 yearsOne();
+
+(async function () {
+  await getData();
+  const data = getData();
+  const countries = data.map(country => country.country);
+  const data2007_09 = data.map(country => country.data["2007-09"]);
+  const data2010_12 = data.map(country => country.data["2010-12"]);
+});
+
+new Chart(document.getElementById("myChart"), {
+  type: "bar",
+  data: {
+    labels: data.map(row => row.year),
+    datasets: [
+      {
+        label: "Acquisitions by year",
+        data: data.map(row => row.count),
+      },
+    ],
+  },
+});
